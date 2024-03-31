@@ -1,8 +1,15 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+    <ion-title>Tab 1</ion-title>
+    <ion-item slot="end" lines="none">
+      <ion-select [(ngModel)]="selectedOption" interface="popover" (ionChange)="onOptionChanged()" placeholder="字体大小">
+        <ion-select-option value="option1">超小字</ion-select-option>
+        <ion-select-option value="option2">小字</ion-select-option>
+        <ion-select-option value="option3">标准</ion-select-option>
+        <ion-select-option value="option4">大字</ion-select-option>
+        <ion-select-option value="option5">超大字</ion-select-option>
+      </ion-select>
+    </ion-item>
   </ion-toolbar>
 </ion-header>
 
@@ -14,6 +21,5 @@
   </ion-header>
 
   <app-explore-container name="Tab 1 page">
-    2232323
   </app-explore-container>
 </ion-content>
